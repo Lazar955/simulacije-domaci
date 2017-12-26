@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Car saloon viewer</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper" class="toggled">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Car saloon viewer
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-path="./pina/bmw.dae" class="set">BMW</a>
+                </li>
+                <li>
+                    <a href="#" data-path="./pina/yugo.dae"  class="set">YUGO</a>
+                </li>
+                <li>
+                    <a href="#" data-path="./pina/benz.dae">Mercedes Benz</a>
+                </li>
+                <li>
+                    <a href="#" data-path="./pina/peu.dae">Pezo</a>
+                </li>
+                <li>
+                    <a href="#">Car 5</a>
+                </li>
+                <li>
+                    <a href="#">car 6</a>
+                </li>
+                    </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+    <!--<script src="https://rawgit.com/mrdoob/three.js/master/examples/js/loaders/ColladaLoader.js"></script>-->
+       <!--<script src="LoaderUtils.js"></script>-->
+    <script src="ColladaLoader.js"></script>
+
+    <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/TrackballControls.js"></script>
+
+    <script src="main.js" defer></script>
+    <!-- Menu Toggle Script -->
+    <script>
+        $(".set").click(function (e) {
+            var path = $(this).data('path')
+            console.log(path)
+
+            window.loaderSet(path);
+        });
+    </script>
+
+</body>
+
+</html>
